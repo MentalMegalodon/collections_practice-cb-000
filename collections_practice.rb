@@ -50,13 +50,11 @@ def sum_array(array)
 end
 
 def add_s(array)
-  result = []
-  array.each_with_index do |a, idx|
+  array.each_with_index.collect do |a, idx|
     if idx != 1
-      result << a + 's'
+      a + 's'
     else
-      result << a
+      a
     end
   end
-  result
 end
